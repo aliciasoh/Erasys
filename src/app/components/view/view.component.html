@@ -1,0 +1,47 @@
+<div class="container">
+    <p (click)="back()" class="back"><i class="fas fa-angle-left"></i>Go Back</p>
+        <div *ngIf="user && userDetails" class="row">
+            <div class="col-lg-12">
+                <div class="card">
+    
+                    <img *ngIf="!!user.picture && user.picture.url" class="card-img-top" [lazyLoad]="user.picture.url">
+                    <img *ngIf="!user.picture || !user.picture.url" class="card-img-top" [lazyLoad]="'../../../assets/images/user.jpg'">
+                    <p class="picture-text">{{user.picture.comment}}</p>
+                    <div class="card-body">
+                            <div class="status-container">
+                                    <i [ngClass]="{'online': user.online_status== 'ONLINE', 'offline': user.online_status != 'ONLINE'}"
+                                    class="fas fa-circle"></i>
+                                    <p *ngIf="user.online_status == 'ONLINE'">Online now</p>
+                                    <p *ngIf="user.online_status!= 'ONLINE'">{{user.last_login | lastOnline}}</p>
+                            </div>
+                        <h5 class="card-title">{{userDetails.personal.age}}, {{user.name}}</h5>
+                        <p class="card-text">{{userDetails.headline}}</p>
+                        <hr>
+                        <p class="card-text"><i class="fas fa-location-arrow"></i>{{userDetails.location.distance}}m, {{userDetails.location.name}}</p>
+                        <hr>
+                        <div class="row details-container">
+                            <div class="col-lg-6">
+                                <h6>Personal</h6>
+                                <p class="card-text">Body Hair: {{userDetails.personal.body_hair | titlecase | removeUnderscore}}</p>
+                                <p class="card-text">Body Type: {{userDetails.personal.body_type | titlecase}}</p>
+                                <p class="card-text">Ethnicity: {{userDetails.personal.ethnicity | titlecase}}</p>
+                                <p class="card-text">Eye Color: {{userDetails.personal.eye_color | titlecase}}</p>
+                                <p class="card-text">Height: {{userDetails.personal.height.cm}}cm</p>
+                                <p class="card-text">Weight: {{userDetails.personal.weight.kg}}kg</p>
+                                <p class="card-text">Relationship: {{userDetails.personal.relationship | titlecase}}</p>
+                                <p class="card-text">Smoker: {{userDetails.personal.smoker | titlecase}}</p>
+
+                            </div>
+                            <div class="col-lg-6">
+                                    <h6>Sexual</h6>
+                                    <p class="card-text">Anal Position: {{userDetails.sexual.anal_position | titlecase}}</p>
+                                    <p class="card-text">Safer Sex: {{userDetails.sexual.safer_sex | titlecase}}</p>
+                                    <p class="card-text">SM: {{userDetails.sexual.sm | titlecase}}</p>
+                                </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>

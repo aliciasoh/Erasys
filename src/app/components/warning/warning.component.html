@@ -1,0 +1,7 @@
+<ngx-smart-modal #myModal [identifier]="'myModal'">
+  <div *ngIf="!!myModal.getData()">
+      <h2>{{myModal.getData().title | titlecase}}</h2>
+      <p>{{myModal.getData().text}}</p>
+      <button *ngIf="myModal.getData().button" type="button" (click)="closeModal()" class="btn btn-primary">{{myModal.getData().button}}</button>
+  </div>
+</ngx-smart-modal>

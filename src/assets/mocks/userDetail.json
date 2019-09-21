@@ -1,0 +1,32 @@
+[{
+	"headline": "I'll calculate the cross-platform SCSI matrix, that should matrix the SCSI matrix!",
+	"id": 3838316780716032,
+	"location": {
+		"area": "Kendricktown",
+		"city": "Kendricktown",
+		"country": "AF",
+		"distance": 396,
+		"name": "AF - Kendricktown"
+	},
+	"personal": {
+		"age": 22,
+		"body_hair": "AVERAGE",
+		"body_type": "BELLY",
+		"ethnicity": "NOENTRY",
+		"eye_color": "BLUE",
+		"height": {
+			"cm": 210
+		},
+		"relationship": "SINGLE",
+		"smoker": "NO",
+		"weight": {
+			"kg": 100
+		}
+	},
+	"sexual": {
+		"anal_position": "TOP_ONLY",
+		"safer_sex": "NOENTRY",
+		"sm": "SOFT"
+	},
+	"is_plus": false
+}]

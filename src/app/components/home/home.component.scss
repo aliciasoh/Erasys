@@ -1,0 +1,55 @@
+@import "../../../styles.scss";
+
+.container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .col-md-4{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .card{
+        display: block;
+        text-align: center;
+        box-shadow: 0px 8px 25px black;
+        img{
+            box-shadow: 0px 8px 25px black;
+            border-radius: 50%;
+            width: 90%;
+            margin-top: 15px;
+        }
+        border: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        .online{
+            color: $success-color;
+        }
+        .offline{
+            color: $danger-color;
+        }
+
+        .status-container{
+            font-size: 12px;
+            display: inline-flex;
+            p{
+                line-height: 12px;
+                margin-left: 5px;
+            }
+        }
+        .card-body{
+            text-align: center;
+            hr{
+                border-color:$elegant-color-dark;
+                background-color:$elegant-color-dark;
+                color:$elegant-color-dark;
+            }
+        }
+        .card-title{
+            font-weight: 500;
+        }
+        .card-text{
+            font-size: 13px;
+            .fa-location-arrow{
+                margin-right: 5px;
+            }
+        }
+    }
+}

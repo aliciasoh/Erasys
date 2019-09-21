@@ -1,0 +1,25 @@
+<div class="container">
+    <div *ngIf="users && users.items && usersDetails" class="row">
+        <div (click)="viewUser(user, usersDetails[i][0])" *ngFor="let user of users.items; let i = index" class="clickable col-md-4 col-lg-3">
+            <div class="card">
+
+                <img *ngIf="!!user.picture && user.picture.url" class="card-img-top" [lazyLoad]="user.picture.url">
+                <img *ngIf="!user.picture || !user.picture.url" class="card-img-top" [lazyLoad]="'../../../assets/images/user.jpg'">
+
+                <div class="card-body">
+                        <div class="status-container">
+                                <i [ngClass]="{'online': user.online_status== 'ONLINE', 'offline': user.online_status != 'ONLINE'}"
+                                class="fas fa-circle"></i>
+                                <p *ngIf="user.online_status == 'ONLINE'">Online now</p>
+                                <p *ngIf="user.online_status!= 'ONLINE'">{{user.last_login | lastOnline}}</p>
+                        </div>
+                    <h5 class="card-title" *ngIf="usersDetails[i]">{{usersDetails[i][0].personal.age}}, {{user.name}}</h5>
+                    <p class="card-text" *ngIf="usersDetails[i]">{{usersDetails[i][0].headline}}</p>
+                    <hr>
+                    <p class="card-text" *ngIf="usersDetails[i]"><i class="fas fa-location-arrow"></i>{{usersDetails[i][0].location.distance}}m, {{usersDetails[i][0].location.name}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

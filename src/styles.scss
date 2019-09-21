@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~ngx-smart-modal/ngx-smart-modal";
+$special-color-dark: #1c2331;
+$success-color: #00C851;
+$danger-color: #ff4444;
+$elegant-color-dark: #212121;
+
+
+body{
+    color: white;
+    background-color: $special-color-dark;
+}
+
+.clickable{
+    cursor: pointer;
+}

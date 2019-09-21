@@ -1,0 +1,23 @@
+@import "../home/home.component.scss";
+
+img{
+    width: 50%!important;
+}
+
+.picture-text{
+    font-size: 13px;
+    margin: 20px 10px 10px 10px;
+}
+.details-container{
+    h6{
+        font-weight: 500;
+    }
+}
+.back{
+    font-weight: 500;
+    cursor: pointer;
+    i{
+        margin-right: 5px;
+    }
+}
+
