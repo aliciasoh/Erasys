@@ -12,10 +12,18 @@ export class ApiService {
   ) { }
 
   getAllUsers() {
+    // for using mock data
+    // return this.http.get("/assets/mocks/user.json");
+
+    // for using live data
     return this.http.get(environment.baseURL + 'api/search');
   }
 
   getUserDetails(id) {
+    // for using mock data
+    // return this.http.get("assets/mocks/userDetail.json");
+
+    // for using live data
     return this.http.get(environment.baseURL + 'api/profiles?ids=' + id);
   }
 
